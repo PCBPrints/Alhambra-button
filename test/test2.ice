@@ -38,8 +38,8 @@
             "pins": [
               {
                 "index": "0",
-                "name": "D0",
-                "value": "119"
+                "name": "LED0",
+                "value": "95"
               }
             ],
             "virtual": false
@@ -50,11 +50,41 @@
           }
         },
         {
-          "id": "d63c1cd9-0dc7-4322-aa3d-e474813f33b2",
-          "type": "logic.gate.not",
+          "id": "539cd13f-a3e8-4d4d-8fb0-f1ad3fd7eb3e",
+          "type": "basic.input",
+          "data": {
+            "name": "button",
+            "pins": [
+              {
+                "index": "0",
+                "name": "D12",
+                "value": "143"
+              }
+            ],
+            "virtual": false
+          },
           "position": {
-            "x": 224,
-            "y": 160
+            "x": 584,
+            "y": 80
+          }
+        },
+        {
+          "id": "25eac621-21e0-4bff-9340-0f6d3cbb4cfa",
+          "type": "basic.output",
+          "data": {
+            "name": "led",
+            "pins": [
+              {
+                "index": "0",
+                "name": "LED4",
+                "value": "99"
+              }
+            ],
+            "virtual": false
+          },
+          "position": {
+            "x": 928,
+            "y": 80
           }
         },
         {
@@ -65,8 +95,8 @@
             "pins": [
               {
                 "index": "0",
-                "name": "D1",
-                "value": "118"
+                "name": "LED1",
+                "value": "96"
               }
             ],
             "virtual": false
@@ -74,6 +104,117 @@
           "position": {
             "x": 392,
             "y": 160
+          }
+        },
+        {
+          "id": "4b239afb-e8e1-49a5-91cb-1500f1ea2d91",
+          "type": "basic.output",
+          "data": {
+            "name": "led2",
+            "pins": [
+              {
+                "index": "0",
+                "name": "LED5",
+                "value": "101"
+              }
+            ],
+            "virtual": false
+          },
+          "position": {
+            "x": 928,
+            "y": 160
+          }
+        },
+        {
+          "id": "d63c1cd9-0dc7-4322-aa3d-e474813f33b2",
+          "type": "logic.gate.not",
+          "position": {
+            "x": 208,
+            "y": 248
+          }
+        },
+        {
+          "id": "32f9dc81-cfe0-4bad-a6b0-8f3f99aa9ca5",
+          "type": "basic.output",
+          "data": {
+            "name": "led",
+            "pins": [
+              {
+                "index": "0",
+                "name": "LED2",
+                "value": "97"
+              }
+            ],
+            "virtual": false
+          },
+          "position": {
+            "x": 392,
+            "y": 248
+          }
+        },
+        {
+          "id": "73096e71-de9f-411c-a376-462506b2ffc9",
+          "type": "logic.gate.not",
+          "position": {
+            "x": 744,
+            "y": 248
+          }
+        },
+        {
+          "id": "180b4f22-700b-4361-b318-59490fc4320e",
+          "type": "basic.output",
+          "data": {
+            "name": "led",
+            "pins": [
+              {
+                "index": "0",
+                "name": "LED6",
+                "value": "102"
+              }
+            ],
+            "virtual": false
+          },
+          "position": {
+            "x": 928,
+            "y": 248
+          }
+        },
+        {
+          "id": "1057a3ce-ba4b-40f3-8501-14f38d1095fc",
+          "type": "basic.output",
+          "data": {
+            "name": "led2",
+            "pins": [
+              {
+                "index": "0",
+                "name": "LED3",
+                "value": "98"
+              }
+            ],
+            "virtual": false
+          },
+          "position": {
+            "x": 392,
+            "y": 328
+          }
+        },
+        {
+          "id": "a90b4e2d-5ad4-43f6-a904-06874ef1d292",
+          "type": "basic.output",
+          "data": {
+            "name": "led2",
+            "pins": [
+              {
+                "index": "0",
+                "name": "LED7",
+                "value": "104"
+              }
+            ],
+            "virtual": false
+          },
+          "position": {
+            "x": 928,
+            "y": 328
           }
         }
       ],
@@ -90,8 +231,8 @@
         },
         {
           "source": {
-            "block": "d63c1cd9-0dc7-4322-aa3d-e474813f33b2",
-            "port": "664caf9e-5f40-4df4-800a-b626af702e62"
+            "block": "aac1b394-533e-4410-9f35-ba80af8abd63",
+            "port": "out"
           },
           "target": {
             "block": "593f2c6a-9492-4335-b1da-a13e7415f6a1",
@@ -106,6 +247,76 @@
           "target": {
             "block": "d63c1cd9-0dc7-4322-aa3d-e474813f33b2",
             "port": "18c2ebc7-5152-439c-9b3f-851c59bac834"
+          }
+        },
+        {
+          "source": {
+            "block": "d63c1cd9-0dc7-4322-aa3d-e474813f33b2",
+            "port": "664caf9e-5f40-4df4-800a-b626af702e62"
+          },
+          "target": {
+            "block": "32f9dc81-cfe0-4bad-a6b0-8f3f99aa9ca5",
+            "port": "in"
+          }
+        },
+        {
+          "source": {
+            "block": "d63c1cd9-0dc7-4322-aa3d-e474813f33b2",
+            "port": "664caf9e-5f40-4df4-800a-b626af702e62"
+          },
+          "target": {
+            "block": "1057a3ce-ba4b-40f3-8501-14f38d1095fc",
+            "port": "in"
+          }
+        },
+        {
+          "source": {
+            "block": "539cd13f-a3e8-4d4d-8fb0-f1ad3fd7eb3e",
+            "port": "out"
+          },
+          "target": {
+            "block": "25eac621-21e0-4bff-9340-0f6d3cbb4cfa",
+            "port": "in"
+          }
+        },
+        {
+          "source": {
+            "block": "539cd13f-a3e8-4d4d-8fb0-f1ad3fd7eb3e",
+            "port": "out"
+          },
+          "target": {
+            "block": "4b239afb-e8e1-49a5-91cb-1500f1ea2d91",
+            "port": "in"
+          }
+        },
+        {
+          "source": {
+            "block": "539cd13f-a3e8-4d4d-8fb0-f1ad3fd7eb3e",
+            "port": "out"
+          },
+          "target": {
+            "block": "73096e71-de9f-411c-a376-462506b2ffc9",
+            "port": "18c2ebc7-5152-439c-9b3f-851c59bac834"
+          }
+        },
+        {
+          "source": {
+            "block": "73096e71-de9f-411c-a376-462506b2ffc9",
+            "port": "664caf9e-5f40-4df4-800a-b626af702e62"
+          },
+          "target": {
+            "block": "180b4f22-700b-4361-b318-59490fc4320e",
+            "port": "in"
+          }
+        },
+        {
+          "source": {
+            "block": "73096e71-de9f-411c-a376-462506b2ffc9",
+            "port": "664caf9e-5f40-4df4-800a-b626af702e62"
+          },
+          "target": {
+            "block": "a90b4e2d-5ad4-43f6-a904-06874ef1d292",
+            "port": "in"
           }
         }
       ]
@@ -206,8 +417,8 @@
     },
     "state": {
       "pan": {
-        "x": 0,
-        "y": 0
+        "x": 20,
+        "y": -9
       },
       "zoom": 1
     }
